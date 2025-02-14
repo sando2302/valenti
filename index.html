@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FELIZ SAN VALENTIN MI PRINCESA❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Column 1 -->
+        <div class="column1">
+            <div class="container">
+                <div class="envelope-wrapper">
+                    <div class="envelope">
+                        <div class="letter">
+                            <div class="text">
+                                <strong>Feliz San Valentín mi princesa❤️</strong> <!-- Aquí se escribió el mensaje -->
+                                <p>
+                                    Solo quiero que sepas que siempre seras muy importante para mi, gracias por ser mi apoyo aunque aveces diga lo contrario,lamento no poder darte miles de cosas que mereces,perdoname de todo corazon por mis actitudes,te pido mil discupas mi amor,m princesa,mi todo,solo quiero llegar a ser alguien perfecto para ti 
+                                    Te amo muchísimo, mi princesa ❤️
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="column2">
+            <div class="separator-box">
+                <div class="audio-container" id="yt-container">
+                    <iframe id="yt-player" width="0" height="0" frameborder="0" allow="autoplay"></iframe>
+                </div>
+                <H2>Do you want to continue being my Feb 14? </H2>
+                <img src="https://media.tenor.com/LRDMe1QpqFYAAAAC/cat-cute.gif" alt="GIF">
+                <button class="playAudio" id="playAudio" onclick="playAudio()">Play Audio</button>
+                <button class="yesBTN" id="yesBTN" onclick="yesButton()">Yes</button>
+                <button class="noBTN" id="noBTN">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Envelope opening animation
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+
+        // YouTube Audio Control
+        let player = document.getElementById("yt-player");
+
+        playAudio = () => {
+            player.src = "https://www.youtube.com/embed/JMWziXLbuNA?autoplay=1"; // Fixed URL
+        }
+
+        yesButton = () => {
+            alert("Sabia que Dirias que siii, Te Amo");
+            window.location.reload();
+        }
+
+        const moveRandomEl = (e) => {
+            e.style.position = "absolute";
+            e.style.top = Math.floor(Math.random() * 90 + 5) + "%";
+            e.style.left = Math.floor(Math.random() * 90 + 5) + "%";
+        }
+
+        const moveRandomBTN = document.getElementById("noBTN").addEventListener("mouseenter", (e) => {
+            moveRandomEl(e.target);
+        });
+    </script>
+</body>
+</html>
